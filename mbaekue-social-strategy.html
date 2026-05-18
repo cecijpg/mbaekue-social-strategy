@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mba'ekue Kids · Estrategia de Redes Sociales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sigmar&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+/* =========================================================
+   MBA'EKUE KIDS · SOCIAL MEDIA STRATEGY
+========================================================= */
+:root{
+  --naranja:#ff7300;  --azul:#0061ee;  --rojo:#e83023;
+  --verde:#00a652;    --rosa:#ff77b9;  --amarillo:#fece00;
+  --ink:#0d0d10;      --ink-soft:#2a2a30;
+  --paper:#fbf7f0;    --paper-2:#f1ece1;
+  --line:rgba(13,13,16,.12); --line-soft:rgba(13,13,16,.06);
+  --display:'Sigmar',system-ui,sans-serif;
+
+  --body:'Manrope',system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0;padding:0}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+.wrap{max-width:1280px;margin:0 auto;padding:0 clamp(20px,5vw,72px)}
+.section{padding:clamp(80px,12vw,160px) 0;position:relative;overflow:hidden}
+.section + .section{border-top:1px solid var(--line-soft)}
+
+.kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:10px}
+.kicker::before{content:"";width:24px;height:1px;background:currentColor}
+.lead{font-size:clamp(18px,1.6vw,22px);line-height:1.5;max-width:62ch;color:var(--ink-soft)}
+
+/* ====== TOP NAV ====== */
+.topnav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,5vw,48px);background:rgba(251,247,240,.78);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line-soft)}
+.topnav__brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-size:18px}
+.topnav__brand .dot{width:10px;height:10px;border-radius:50%;background:var(--naranja);box-shadow:0 0 0 4px rgba(255,115,0,.15)}
+.topnav__menu{display:flex;gap:6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.topnav__menu a{text-decoration:none;padding:8px 12px;border-radius:999px;transition:background .25s var(--ease),color .25s var(--ease)}
+.topnav__menu a:hover,.topnav__menu a.is-active{background:var(--ink);color:var(--paper)}
+.topnav__cta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:10px 16px;background:var(--ink);color:var(--paper);border-radius:999px;text-decoration:none}
+@media(max-width:980px){.topnav__menu{display:none}}
+
+.progress{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:10px}
+.progress button{width:10px;height:10px;border-radius:50%;background:rgba(13,13,16,.18);transition:all .25s var(--ease)}
+.progress button.is-active{background:var(--ink);transform:scale(1.4)}
+@media(max-width:768px){.progress{display:none}}
+
+/* ====== COVER ====== */
+.cover{min-height:100vh;padding:110px clamp(20px,5vw,72px) 56px;background:var(--naranja);color:var(--paper);position:relative;display:flex;flex-direction:column;overflow:hidden}
+.cover::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:3px 3px;pointer-events:none}
+.cover__top{display:flex;justify-content:space-between;align-items:flex-start;font-size:11px;letter-spacing:.22em;text-transform:uppercase;opacity:.9;position:relative;z-index:3}
+.cover__center{flex:1;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding:48px 0;position:relative;z-index:2}
+.cover__title-wrap{position:relative;z-index:3;min-width:0}
+.cover__title{font-family:var(--display);font-size:clamp(48px,8.5vw,128px);line-height:.88;letter-spacing:-.02em;color:var(--paper);margin:0}
+.cover__title em{font-style:normal;font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;display:block;font-size:.5em;margin-top:.18em;letter-spacing:.01em}
+.cover__sub{font-size:clamp(14px,1.2vw,16px);letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin:28px 0 0;max-width:38ch;opacity:.92;line-height:1.55}
+.cover__client{margin-top:28px;display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.18);padding:8px 16px;border-radius:999px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;backdrop-filter:blur(6px)}
+.cover__client::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--amarillo)}
+
+/* Instagram-feed mockup on cover */
+.ig-feed{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;aspect-ratio:1/1;max-width:520px;margin-left:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.22));transform:rotate(-3deg) scale(.96);transition:transform .8s var(--ease);position:relative}
+.cover__center:hover .ig-feed{transform:rotate(0deg) scale(1)}
+.ig-tile{aspect-ratio:1/1;border-radius:10px;padding:14px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;font-size:13px;line-height:.95;color:var(--paper)}
+.ig-tile .corner{position:absolute;top:8px;right:8px;width:14px;height:14px;display:flex;align-items:center;justify-content:center}
+.ig-tile .corner svg{width:14px;height:14px;fill:rgba(255,255,255,.85)}
+.ig-tile.is-dark{color:var(--ink)}
+.ig-tile.is-dark .corner svg{fill:var(--ink)}
+.ig-1{background:var(--rojo)}
+.ig-1 .t{font-family:var(--body);font-weight:800;font-style:italic;font-size:28px;line-height:.95;letter-spacing:-.02em}
+.ig-2{background:var(--rosa);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.18) 0 8px,transparent 8px 16px)}
+.ig-2 .t{font-family:var(--display);font-size:14px;line-height:1}
+.ig-3{background:var(--azul);justify-content:center;align-items:flex-start;text-align:left}
+.ig-3 .num{font-family:var(--display);font-size:44px;line-height:.85}
+.ig-3 .l{font-size:9px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin-top:6px;opacity:.85}
+.ig-4{background:var(--amarillo);color:var(--ink)}
+.ig-4 .t{font-family:var(--display);font-size:14px;line-height:.95}
+.ig-4 .s{font-family:var(--body);font-weight:800;font-style:italic;font-size:22px;line-height:.95;letter-spacing:-.02em;margin-top:4px;color:var(--rojo)}
+.ig-5{background:var(--paper)}
+.ig-5 .t{font-family:var(--body);font-weight:800;font-style:italic;font-size:30px;line-height:.95;letter-spacing:-.02em;color:var(--rojo)}
+.ig-6{background:var(--verde)}
+.ig-6 .t{font-family:var(--display);font-size:14px;line-height:.95}
+.ig-6 .s{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;opacity:.88;margin-top:4px}
+.ig-7{background:var(--naranja);background-image:linear-gradient(135deg,var(--naranja),#ff9333)}
+.ig-7 .num{font-family:var(--display);font-size:62px;line-height:.8}
+.ig-7 .s{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin-top:6px;opacity:.88}
+.ig-8{background:var(--paper-2);color:var(--ink)}
+.ig-8 .t{font-family:var(--body);font-weight:600;font-style:italic;font-size:17px;line-height:1.15;letter-spacing:-.01em;color:var(--ink-soft)}
+.ig-9{background:var(--azul)}
+.ig-9 .t{font-family:var(--display);font-size:13px;line-height:.95}
+.ig-9 .cta{display:inline-block;margin-top:6px;background:var(--paper);color:var(--azul);font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:4px 8px;border-radius:999px}
+
+.cover__meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-top:28px;border-top:1px solid rgba(255,255,255,.25);position:relative;z-index:3}
+.cover__meta .cell{font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.92}
+.cover__meta .cell b{display:block;font-family:var(--display);font-size:20px;letter-spacing:0;text-transform:none;margin-top:6px;font-weight:400}
+
+@media(max-width:880px){
+  .cover__center{grid-template-columns:1fr;gap:32px}
+  .ig-feed{max-width:380px;margin:0 auto;transform:none}
+  .cover__meta{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ====== 01 · MANIFIESTO ====== */
+.manifesto{background:var(--paper)}
+.manifesto__grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:36px}
+.manifesto__big{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(32px,5vw,68px);line-height:1;color:var(--ink)}
+.manifesto__big span{color:var(--rojo)}
+.manifesto__body p{margin:0 0 18px;font-size:17px;color:var(--ink-soft)}
+.manifesto__body p strong{color:var(--ink);font-weight:700}
+@media(max-width:880px){.manifesto__grid{grid-template-columns:1fr;gap:40px}}
+
+.context-stats{margin-top:80px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cstat{background:var(--ink);color:var(--paper);border-radius:22px;padding:36px;position:relative;overflow:hidden}
+.cstat:nth-child(2){background:var(--naranja)}
+.cstat:nth-child(3){background:var(--azul)}
+.cstat .big{font-family:var(--display);font-size:clamp(56px,7vw,96px);line-height:.88;letter-spacing:-.02em}
+.cstat .unit{font-family:var(--body);font-weight:800;font-style:italic;font-size:28px;margin-left:8px;letter-spacing:-.02em}
+.cstat h6{font-family:var(--body);font-weight:800;font-size:15px;margin:18px 0 6px;letter-spacing:-.01em}
+.cstat p{font-size:13px;line-height:1.55;margin:0;opacity:.85}
+@media(max-width:880px){.context-stats{grid-template-columns:1fr}}
+
+/* ====== 02 · OBJETIVOS ====== */
+.goals{background:var(--azul);color:var(--paper)}
+.goals .kicker{color:rgba(255,255,255,.85)}
+.goals__head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end;margin-bottom:80px}
+.goals__head h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(40px,6.5vw,92px);line-height:.95;margin:8px 0 0}
+.goals__head p{font-size:17px;color:rgba(255,255,255,.9);margin:0}
+@media(max-width:880px){.goals__head{grid-template-columns:1fr}}
+.goal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.goal{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:36px;position:relative;overflow:hidden;transition:transform .4s var(--ease),background .4s var(--ease)}
+.goal:hover{transform:translateY(-6px);background:rgba(255,255,255,.14)}
+.goal .num{font-family:var(--display);font-size:64px;line-height:1;opacity:.4}
+.goal .stage{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;margin-top:14px;color:var(--amarillo)}
+.goal h3{font-family:var(--display);font-weight:400;font-size:26px;margin:8px 0 14px}
+.goal p{font-size:14px;color:rgba(255,255,255,.85);margin:0 0 20px;line-height:1.55}
+.goal .kpi{padding-top:18px;border-top:1px solid rgba(255,255,255,.18);font-size:12px;letter-spacing:.04em}
+.goal .kpi b{display:block;font-family:var(--display);font-size:22px;letter-spacing:0;margin-top:6px;font-weight:400;color:var(--paper)}
+@media(max-width:880px){.goal-grid{grid-template-columns:1fr}}
+
+/* ====== 03 · AUDIENCIA ====== */
+.audience{background:var(--paper-2)}
+.audience__head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end;margin-bottom:64px}
+.audience__head h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(36px,5.5vw,76px);line-height:.98;margin:8px 0 0}
+@media(max-width:880px){.audience__head{grid-template-columns:1fr}}
+.persona-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.persona{background:#fff;border-radius:24px;padding:32px;position:relative;border:1px solid var(--line-soft);transition:transform .35s var(--ease)}
+.persona:hover{transform:translateY(-6px)}
+.persona .av{width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:28px;color:#fff;margin-bottom:18px}
+.persona:nth-child(1) .av{background:var(--rojo)}
+.persona:nth-child(2) .av{background:var(--verde)}
+.persona:nth-child(3) .av{background:var(--rosa)}
+.persona .role{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--ink-soft)}
+.persona h4{font-family:var(--display);font-weight:400;font-size:24px;margin:6px 0 4px;line-height:1.05}
+.persona .age{font-size:13px;color:var(--ink-soft);font-weight:600;margin-bottom:16px}
+.persona blockquote{margin:0 0 20px;font-family:var(--body);font-weight:600;font-style:italic;letter-spacing:-.01em;font-size:22px;line-height:1.15;color:var(--ink);border-left:3px solid currentColor;padding-left:14px}
+.persona:nth-child(1) blockquote{color:var(--rojo)}
+.persona:nth-child(2) blockquote{color:var(--verde)}
+.persona:nth-child(3) blockquote{color:var(--rosa)}
+.persona dl{margin:0;padding-top:18px;border-top:1px solid var(--line);font-size:13px}
+.persona dl > div{display:grid;grid-template-columns:90px 1fr;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.persona dl > div:last-child{border-bottom:0}
+.persona dt{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--ink-soft);padding-top:2px}
+.persona dd{margin:0;color:var(--ink-soft);line-height:1.5}
+@media(max-width:880px){.persona-grid{grid-template-columns:1fr}}
+
+/* ====== 04 · PILARES DE CONTENIDO ====== */
+.pillars{background:var(--rojo);color:var(--paper)}
+.pillars .kicker{color:rgba(255,255,255,.85)}
+.pillars__head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:64px}
+.pillars__head h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(36px,5.5vw,76px);line-height:.98;margin:8px 0 0}
+.pillars__head p{color:rgba(255,255,255,.9);font-size:17px;margin:0}
+@media(max-width:880px){.pillars__head{grid-template-columns:1fr}}
+.pillar-row{display:grid;grid-template-columns:80px 60px 1.2fr 2fr auto;gap:24px;padding:28px 0;align-items:start;border-top:1px solid rgba(255,255,255,.2);transition:padding .3s var(--ease),background .3s var(--ease)}
+.pillar-row:last-child{border-bottom:1px solid rgba(255,255,255,.2)}
+.pillar-row:hover{padding-left:16px;background:rgba(255,255,255,.05)}
+.pillar-row .num{font-family:var(--display);font-size:48px;line-height:1;color:var(--amarillo)}
+.pillar-row .pct{font-family:var(--display);font-size:28px;line-height:1.05;color:var(--paper)}
+.pillar-row .pct small{font-size:14px;opacity:.6}
+.pillar-row h4{font-family:var(--body);font-weight:800;font-size:20px;letter-spacing:-.01em;margin:0;line-height:1.15}
+.pillar-row p{margin:0;color:rgba(255,255,255,.85);font-size:14px;line-height:1.55}
+.pillar-row .fmt{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;padding:6px 10px;border-radius:999px;align-self:center;white-space:nowrap;background:var(--paper);color:var(--rojo)}
+@media(max-width:880px){
+  .pillar-row{grid-template-columns:60px 1fr;grid-template-rows:auto auto auto auto;gap:8px 16px}
+  .pillar-row .num{grid-row:1/3}
+  .pillar-row .pct{grid-column:2}
+  .pillar-row p{grid-column:2}
+  .pillar-row .fmt{grid-column:2;justify-self:start}
+}
+
+/* ====== 05 · VOZ ====== */
+.voice{background:var(--verde);color:var(--paper)}
+.voice .kicker{color:rgba(255,255,255,.85)}
+.voice__title{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(42px,7vw,104px);line-height:.95;margin:8px 0 24px}
+.voice__lead{font-size:clamp(18px,1.7vw,22px);max-width:62ch;color:rgba(255,255,255,.92);margin:0 0 64px}
+.voice-attributes{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:64px}
+.voice-attributes .attr{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:24px;transition:transform .3s var(--ease)}
+.voice-attributes .attr:hover{transform:translateY(-4px)}
+.voice-attributes .attr h5{font-family:var(--display);font-weight:400;font-size:22px;margin:0 0 8px}
+.voice-attributes .attr p{font-size:13px;margin:0;color:rgba(255,255,255,.85);line-height:1.5}
+@media(max-width:880px){.voice-attributes{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.voice-attributes{grid-template-columns:1fr}}
+
+.voice-platforms{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vp{background:var(--paper);color:var(--ink);border-radius:18px;padding:24px;position:relative;display:flex;flex-direction:column;gap:14px}
+.vp .pf{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:#fff;padding:5px 10px;border-radius:999px;align-self:flex-start}
+.vp:nth-child(1) .pf{background:var(--rojo)}
+.vp:nth-child(2) .pf{background:var(--ink)}
+.vp:nth-child(3) .pf{background:var(--azul)}
+.vp:nth-child(4) .pf{background:var(--verde)}
+.vp .sample{font-family:var(--body);font-weight:600;font-style:italic;letter-spacing:-.01em;font-size:20px;line-height:1.15;color:var(--ink);flex:1}
+.vp small{font-size:11px;color:var(--ink-soft);letter-spacing:.05em;border-top:1px dashed var(--line);padding-top:10px}
+@media(max-width:880px){.voice-platforms{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.voice-platforms{grid-template-columns:1fr}}
+
+/* ====== 06 · PALETA ====== */
+.colors{background:var(--paper)}
+.colors__intro{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;margin-bottom:64px;align-items:end}
+.colors__intro h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(40px,6.5vw,92px);line-height:.95;margin:8px 0 0}
+@media(max-width:880px){.colors__intro{grid-template-columns:1fr}}
+.color-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.swatch{border-radius:20px;aspect-ratio:.78/1;padding:24px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;cursor:pointer;transition:transform .35s var(--ease)}
+.swatch:hover{transform:translateY(-6px) rotate(-1deg)}
+.swatch .top{display:flex;justify-content:space-between;align-items:start}
+.swatch .name{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:28px;line-height:1}
+.swatch .sub{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;opacity:.65}
+.swatch .codes{font-size:11px;line-height:1.65;font-weight:600;font-feature-settings:"tnum"}
+.swatch .codes b{font-weight:800}
+.sw-naranja{background:var(--naranja);color:#fff}
+.sw-azul{background:var(--azul);color:#fff}
+.sw-rojo{background:var(--rojo);color:#fff}
+.sw-verde{background:var(--verde);color:#fff}
+.sw-rosa{background:var(--rosa);color:#fff}
+.sw-amarillo{background:var(--amarillo);color:var(--ink)}
+@media(max-width:1100px){.color-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.color-grid{grid-template-columns:repeat(2,1fr)}}
+.color-use{margin-top:40px;background:#fff;border:1px solid var(--line-soft);border-radius:20px;padding:32px;display:grid;grid-template-columns:1fr 2fr;gap:32px}
+.color-use h6{font-family:var(--body);font-weight:800;font-size:14px;letter-spacing:.04em;margin:0 0 8px}
+.color-use p{font-size:14px;color:var(--ink-soft);margin:0;line-height:1.6}
+@media(max-width:880px){.color-use{grid-template-columns:1fr}}
+
+/* ====== 07 · TIPOGRAFÍA ====== */
+.typography{background:var(--ink);color:var(--paper)}
+.typography .kicker{color:rgba(255,255,255,.7)}
+.typography__head{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:64px;align-items:end}
+.typography__head h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(36px,5.5vw,76px);line-height:.98;margin:8px 0 0}
+.typography__head p{color:rgba(255,255,255,.75);font-size:17px;margin:0}
+@media(max-width:880px){.typography__head{grid-template-columns:1fr}}
+.font-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:48px;margin-bottom:20px;display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:center}
+.font-card .meta h3{font-family:var(--display);font-weight:400;font-size:36px;margin:0 0 8px}
+.font-card .meta .role{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.6)}
+.font-card .meta p{color:rgba(255,255,255,.75);font-size:15px;margin:18px 0 24px}
+.font-card .meta .weights{display:flex;gap:8px;flex-wrap:wrap}
+.font-card .meta .weights span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18)}
+.font-card .sample-display{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(44px,6vw,92px);line-height:.95;color:var(--amarillo)}
+.font-card .sample-sans{font-family:var(--body);font-weight:800;font-size:clamp(48px,6vw,90px);line-height:.95;letter-spacing:-.03em}
+@media(max-width:880px){.font-card{grid-template-columns:1fr;gap:24px;padding:32px}}
+
+/* ====== 08 · PLATAFORMAS ====== */
+.platforms{background:var(--paper-2)}
+.platforms__head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end;margin-bottom:64px}
+.platforms__head h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(36px,5.5vw,76px);line-height:.98;margin:8px 0 0}
+@media(max-width:880px){.platforms__head{grid-template-columns:1fr}}
+.platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.platform{background:#fff;border-radius:22px;padding:28px;border:1px solid var(--line-soft);position:relative;display:flex;flex-direction:column;gap:14px;transition:transform .35s var(--ease)}
+.platform:hover{transform:translateY(-6px)}
+.platform .head{display:flex;align-items:center;gap:12px}
+.platform .badge{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:20px;color:#fff}
+.platform.is-1 .badge{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.platform.is-2 .badge{background:var(--ink)}
+.platform.is-3 .badge{background:#e60023}
+.platform.is-4 .badge{background:#25d366}
+.platform .name{font-family:var(--display);font-weight:400;font-size:22px}
+.platform .tier{display:inline-block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--ink-soft);padding:4px 8px;background:var(--paper-2);border-radius:999px;align-self:flex-start}
+.platform .row{display:grid;grid-template-columns:90px 1fr;gap:10px;padding:8px 0;font-size:13px;border-top:1px dashed var(--line)}
+.platform .row:first-of-type{border-top:1px solid var(--line);margin-top:8px}
+.platform dt{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--ink-soft);padding-top:2px}
+.platform dd{margin:0;font-size:13px;color:var(--ink-soft);line-height:1.5}
+.platform dd b{color:var(--ink);font-weight:700}
+@media(max-width:1100px){.platform-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.platform-grid{grid-template-columns:1fr}}
+
+/* ====== 09 · FORMATOS ====== */
+.formats{background:var(--amarillo);color:var(--ink)}
+.formats__head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end;margin-bottom:64px}
+.formats__head h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(40px,6.5vw,92px);line-height:.95;margin:8px 0 0}
+@media(max-width:880px){.formats__head{grid-template-columns:1fr}}
+.formats-mix{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;align-items:center}
+.format-chart{
+  --reels:50; --carr:25; --story:10; --posts:10; --lives:5;
+  aspect-ratio:1/1; border-radius:50%; max-width:380px; width:100%; margin:0 auto;
+  background:conic-gradient(
+    var(--rojo) 0% 50%,
+    var(--azul) 50% 75%,
+    var(--verde) 75% 85%,
+    var(--rosa) 85% 95%,
+    var(--ink) 95% 100%
+  );
+  position:relative;
+  box-shadow:0 30px 50px rgba(0,0,0,.18);
+}
+.format-chart::before{content:"";position:absolute;inset:25%;background:var(--amarillo);border-radius:50%}
+.format-chart::after{content:"100%";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:32px;color:var(--ink)}
+.format-list{display:flex;flex-direction:column;gap:14px}
+.format-item{display:grid;grid-template-columns:24px 1fr auto;gap:16px;padding:14px 18px;background:rgba(0,0,0,.06);border-radius:14px;align-items:center;transition:background .3s var(--ease)}
+.format-item:hover{background:rgba(0,0,0,.12)}
+.format-item .swatch-dot{width:18px;height:18px;border-radius:5px}
+.format-item h6{font-family:var(--body);font-weight:800;font-size:16px;margin:0;letter-spacing:-.01em}
+.format-item p{margin:2px 0 0;font-size:12px;color:rgba(13,13,16,.65);line-height:1.4}
+.format-item .pct{font-family:var(--display);font-size:28px;line-height:1}
+@media(max-width:880px){.formats-mix{grid-template-columns:1fr}.format-chart{max-width:280px}}
+
+/* ====== 10 · CALENDARIO EDITORIAL ====== */
+.calendar{background:var(--rosa);color:var(--ink)}
+.calendar__head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end;margin-bottom:64px}
+.calendar__head h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(36px,5.5vw,76px);line-height:.98;margin:8px 0 0}
+@media(max-width:880px){.calendar__head{grid-template-columns:1fr}}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;background:#fff;border-radius:22px;padding:20px}
+.cal-day{display:flex;flex-direction:column;gap:8px;min-height:240px}
+.cal-day .lbl{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--ink-soft);padding:8px 4px;border-bottom:1px solid var(--line)}
+.cal-day .item{padding:10px;border-radius:8px;color:#fff;font-size:11px;line-height:1.3;font-weight:600;flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:6px}
+.cal-day .item .pillar{font-size:9px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;opacity:.85}
+.cal-day .item.is-naranja{background:var(--naranja)}
+.cal-day .item.is-azul{background:var(--azul)}
+.cal-day .item.is-rojo{background:var(--rojo)}
+.cal-day .item.is-verde{background:var(--verde)}
+.cal-day .item.is-amarillo{background:var(--amarillo);color:var(--ink)}
+.cal-day .story{padding:6px 8px;background:var(--paper-2);color:var(--ink-soft);border-radius:6px;font-size:10px;font-weight:600;text-align:center}
+@media(max-width:980px){.cal-grid{grid-template-columns:1fr 1fr}.cal-day{min-height:auto}}
+@media(max-width:560px){.cal-grid{grid-template-columns:1fr}}
+
+/* ====== 11 · IDEAS DE CONTENIDO ====== */
+.ideas{background:var(--paper)}
+.ideas__head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end;margin-bottom:64px}
+.ideas__head h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(36px,5.5vw,76px);line-height:.98;margin:8px 0 0}
+@media(max-width:880px){.ideas__head{grid-template-columns:1fr}}
+.idea-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.idea{background:#fff;border-radius:18px;padding:24px;border:1px solid var(--line-soft);position:relative;display:flex;flex-direction:column;gap:14px;transition:transform .35s var(--ease)}
+.idea:hover{transform:translateY(-5px)}
+.idea .meta{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.idea .num{font-family:var(--display);font-size:32px;color:var(--ink);opacity:.18;line-height:1}
+.idea .fmt{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;padding:5px 10px;border-radius:999px;color:#fff}
+.idea[data-fmt="reel"] .fmt{background:var(--rojo)}
+.idea[data-fmt="carrusel"] .fmt{background:var(--azul)}
+.idea[data-fmt="story"] .fmt{background:var(--verde)}
+.idea[data-fmt="post"] .fmt{background:var(--naranja)}
+.idea h4{font-family:var(--body);font-weight:800;font-size:17px;line-height:1.25;letter-spacing:-.01em;margin:0}
+.idea p{font-size:13px;color:var(--ink-soft);margin:0;line-height:1.5}
+.idea .pillar-tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--ink-soft);padding-top:12px;border-top:1px dashed var(--line)}
+@media(max-width:880px){.idea-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.idea-grid{grid-template-columns:1fr}}
+
+/* ====== 12 · FUNNEL ====== */
+.funnel{background:var(--ink);color:var(--paper)}
+.funnel .kicker{color:rgba(255,255,255,.7)}
+.funnel__head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end;margin-bottom:64px}
+.funnel__head h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(36px,5.5vw,76px);line-height:.98;margin:8px 0 0;color:var(--amarillo)}
+.funnel__head p{color:rgba(255,255,255,.75);font-size:17px;margin:0}
+@media(max-width:880px){.funnel__head{grid-template-columns:1fr}}
+.fn-track{display:flex;flex-direction:column;gap:14px;max-width:920px;margin:0 auto}
+.fn-stage{display:grid;grid-template-columns:auto 1fr;gap:32px;padding:28px 32px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);position:relative;align-items:center}
+.fn-stage.s1{width:100%}
+.fn-stage.s2{width:90%;margin:0 auto}
+.fn-stage.s3{width:78%;margin:0 auto}
+.fn-stage.s4{width:62%;margin:0 auto}
+.fn-stage::before{content:"";position:absolute;left:32px;top:50%;transform:translateY(-50%);width:8px;height:50%;border-radius:4px}
+.fn-stage.s1::before{background:var(--rojo)}
+.fn-stage.s2::before{background:var(--naranja)}
+.fn-stage.s3::before{background:var(--verde)}
+.fn-stage.s4::before{background:var(--amarillo)}
+.fn-stage .ldr{padding-left:18px;min-width:180px}
+.fn-stage .stage-num{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:rgba(255,255,255,.55)}
+.fn-stage h4{font-family:var(--display);font-weight:400;font-size:22px;margin:6px 0 4px;color:var(--paper)}
+.fn-stage .metric{font-size:11px;letter-spacing:.05em;color:rgba(255,255,255,.7);font-weight:700}
+.fn-stage .content{font-size:14px;line-height:1.55;color:rgba(255,255,255,.85);margin:0}
+@media(max-width:880px){
+  .fn-stage{grid-template-columns:1fr;width:100%!important;padding:22px}
+  .fn-stage::before{display:none}
+  .fn-stage .ldr{padding-left:0}
+}
+
+/* ====== 13 · KPIs ====== */
+.kpis{background:var(--paper-2)}
+.kpis__head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end;margin-bottom:48px}
+.kpis__head h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(36px,5.5vw,76px);line-height:.98;margin:8px 0 0}
+@media(max-width:880px){.kpis__head{grid-template-columns:1fr}}
+.north-star{background:var(--ink);color:var(--paper);border-radius:24px;padding:48px;margin-bottom:40px;display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+.north-star::before{content:"★";position:absolute;top:-40px;right:-20px;font-size:240px;color:var(--amarillo);opacity:.08;line-height:1}
+.north-star .lbl{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--amarillo);margin-bottom:8px}
+.north-star h3{font-family:var(--display);font-weight:400;font-size:32px;margin:0;line-height:1.05}
+.north-star .targets{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.north-star .targets .t{padding:18px;background:rgba(255,255,255,.06);border-radius:14px}
+.north-star .targets .t .q{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:rgba(255,255,255,.6)}
+.north-star .targets .t .v{font-family:var(--display);font-size:36px;line-height:1;margin-top:8px}
+.north-star .targets .t .v small{font-size:14px;opacity:.6}
+@media(max-width:880px){.north-star{grid-template-columns:1fr;padding:32px}.north-star .targets{grid-template-columns:repeat(3,1fr)}}
+
+.kpi-table{background:#fff;border:1px solid var(--line-soft);border-radius:18px;overflow:hidden}
+.kpi-row{display:grid;grid-template-columns:1.4fr 1fr .8fr .8fr .8fr;gap:0;align-items:center;border-bottom:1px solid var(--line-soft)}
+.kpi-row:last-child{border-bottom:0}
+.kpi-row.is-head{background:var(--paper-2);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:var(--ink-soft)}
+.kpi-row > div{padding:18px 16px}
+.kpi-row .name{font-weight:700}
+.kpi-row .name small{display:block;font-size:11px;color:var(--ink-soft);font-weight:500;margin-top:2px}
+.kpi-row .plat{font-size:12px;color:var(--ink-soft);letter-spacing:.04em}
+.kpi-row .v{font-family:var(--display);font-size:18px;line-height:1}
+.kpi-row .v small{font-size:11px;opacity:.6}
+.kpi-row .now{color:var(--ink-soft)}
+.kpi-row .goal-3m{color:var(--naranja)}
+.kpi-row .goal-6m{color:var(--rojo)}
+@media(max-width:780px){
+  .kpi-row{grid-template-columns:1fr 1fr;padding:14px}
+  .kpi-row > div{padding:8px 4px}
+  .kpi-row.is-head{display:none}
+  .kpi-row .plat{font-size:11px}
+}
+
+/* ====== 14 · ROADMAP ====== */
+.roadmap{background:var(--paper)}
+.roadmap__head{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;margin-bottom:64px;align-items:end}
+.roadmap__head h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(36px,5.5vw,76px);line-height:.98;margin:8px 0 0}
+@media(max-width:880px){.roadmap__head{grid-template-columns:1fr}}
+.roadmap-track{position:relative;padding:0 0 0 36px}
+.roadmap-track::before{content:"";position:absolute;left:14px;top:18px;bottom:18px;width:2px;background:linear-gradient(180deg,var(--naranja),var(--azul),var(--verde),var(--rojo))}
+.phase{position:relative;padding:24px 0;display:grid;grid-template-columns:1fr 1.2fr;gap:48px;border-bottom:1px solid var(--line)}
+.phase:last-child{border-bottom:0}
+.phase::before{content:"";position:absolute;left:-31px;top:34px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:3px solid var(--ink)}
+.phase[data-c="naranja"]::before{border-color:var(--naranja)}
+.phase[data-c="azul"]::before{border-color:var(--azul)}
+.phase[data-c="verde"]::before{border-color:var(--verde)}
+.phase[data-c="rojo"]::before{border-color:var(--rojo)}
+.phase .left{display:flex;flex-direction:column;gap:8px}
+.phase .left .pill{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:800;padding:4px 10px;border-radius:999px;align-self:flex-start;color:#fff}
+.phase[data-c="naranja"] .pill{background:var(--naranja)}
+.phase[data-c="azul"] .pill{background:var(--azul)}
+.phase[data-c="verde"] .pill{background:var(--verde)}
+.phase[data-c="rojo"] .pill{background:var(--rojo)}
+.phase h3{font-family:var(--display);font-weight:400;font-size:30px;margin:0;line-height:1.05}
+.phase .time{font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--ink-soft)}
+.phase .right ul{margin:0;padding:0;list-style:none}
+.phase .right li{display:flex;gap:12px;padding:8px 0;font-size:15px;color:var(--ink-soft);border-bottom:1px dashed var(--line)}
+.phase .right li:last-child{border-bottom:0}
+.phase .right li::before{content:"→";font-weight:800;color:var(--ink);flex:none}
+@media(max-width:880px){.phase{grid-template-columns:1fr;gap:16px}}
+
+/* ====== CIERRE ====== */
+.close{background:var(--amarillo);color:var(--ink);min-height:80vh;display:flex;align-items:center;position:relative;overflow:hidden;text-align:center}
+.close__inner{position:relative;z-index:2;width:100%}
+.close .eyebrow{color:var(--rojo);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;opacity:.85}
+.close h2{font-family:var(--body);font-weight:800;font-style:italic;letter-spacing:-.02em;font-size:clamp(42px,8vw,120px);line-height:.95;margin:16px auto 24px;color:var(--ink);max-width:18ch}
+.close h2 em{font-style:normal;color:var(--rojo)}
+.close p{font-size:clamp(18px,1.6vw,22px);max-width:56ch;margin:0 auto 40px;color:rgba(13,13,16,.78)}
+.close .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.close .cta-row a{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:transform .25s var(--ease)}
+.close .cta-row a:hover{transform:translateY(-3px)}
+.close .cta-row .pri{background:var(--ink);color:var(--amarillo)}
+.close .cta-row .sec{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.close .credits{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;margin-top:60px;opacity:.5}
+.close .blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.5}
+.close .b1{width:280px;height:280px;background:var(--naranja);top:-80px;left:-80px}
+.close .b2{width:240px;height:240px;background:var(--rosa);bottom:-80px;right:-60px}
+.close .b3{width:180px;height:180px;background:var(--rojo);top:50%;right:10%;opacity:.3}
+
+/* ====== REVEAL ====== */
+[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+[data-reveal].is-in{opacity:1;transform:translateY(0)}
+[data-reveal][data-d="1"]{transition-delay:.08s}
+[data-reveal][data-d="2"]{transition-delay:.16s}
+[data-reveal][data-d="3"]{transition-delay:.24s}
+[data-reveal][data-d="4"]{transition-delay:.32s}
+[data-reveal][data-d="5"]{transition-delay:.40s}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="topnav" aria-label="Navegación principal">
+  <div class="topnav__brand"><span class="dot"></span><span>Mba'ekue&nbsp;Kids · Social Strategy</span></div>
+  <div class="topnav__menu">
+    <a href="#manifesto">Contexto</a>
+    <a href="#goals">Objetivos</a>
+    <a href="#audience">Audiencia</a>
+    <a href="#pillars">Pilares</a>
+    <a href="#voice">Voz</a>
+    <a href="#platforms">Plataformas</a>
+    <a href="#calendar">Calendario</a>
+    <a href="#funnel">Funnel</a>
+    <a href="#roadmap">Roadmap</a>
+  </div>
+  <a class="topnav__cta" href="#close">v 1.0 · 2026</a>
+</nav>
+
+<aside class="progress" aria-hidden="true">
+  <button data-target="#cover" class="is-active" title="Cover"></button>
+  <button data-target="#manifesto" title="Manifiesto"></button>
+  <button data-target="#goals" title="Objetivos"></button>
+  <button data-target="#audience" title="Audiencia"></button>
+  <button data-target="#pillars" title="Pilares"></button>
+  <button data-target="#voice" title="Voz"></button>
+  <button data-target="#color" title="Color"></button>
+  <button data-target="#type" title="Tipografía"></button>
+  <button data-target="#platforms" title="Plataformas"></button>
+  <button data-target="#formats" title="Formatos"></button>
+  <button data-target="#calendar" title="Calendario"></button>
+  <button data-target="#ideas" title="Ideas"></button>
+  <button data-target="#funnel" title="Funnel"></button>
+  <button data-target="#kpis" title="KPIs"></button>
+  <button data-target="#roadmap" title="Roadmap"></button>
+  <button data-target="#close" title="Cierre"></button>
+</aside>
+
+<!-- ============ COVER ============ -->
+<header id="cover" class="cover">
+  <div class="cover__top">
+    <span>Estrategia · v1.0 · 2026</span>
+    <span>Confidencial · Mba'ekue Kids</span>
+  </div>
+
+  <div class="cover__center">
+    <div class="cover__title-wrap">
+      <h1 class="cover__title">Estrategia de<br/>Redes Sociales<em>una historia que se comparte</em></h1>
+      <p class="cover__sub">Cómo convertir cada cumpleaños en una conversación digital que se vuelve reserva — y cada reserva en un recuerdo que vuelve a empezar.</p>
+      <div class="cover__client">Cliente <span>·</span> Mba'ekue Kids · Villarrica</div>
+    </div>
+
+    <!-- Instagram feed mockup -->
+    <div class="ig-feed" aria-hidden="true">
+      <div class="ig-tile ig-1">
+        <span class="corner"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="t">Hagamos magia</span>
+      </div>
+      <div class="ig-tile ig-2">
+        <span class="t">Sábado<br/>18hs</span>
+      </div>
+      <div class="ig-tile ig-3">
+        <span class="num">98<small style="font-size:24px">%</small></span>
+        <span class="l">mamás felices</span>
+      </div>
+      <div class="ig-tile ig-4">
+        <span class="corner"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="t">cinco años</span>
+        <span class="s">de magia</span>
+      </div>
+      <div class="ig-tile ig-5">
+        <span class="t">¡Llegó<br/>el día!</span>
+      </div>
+      <div class="ig-tile ig-6">
+        <span class="corner"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+        <span class="s">Tras bambalinas</span>
+        <span class="t">24 horas antes</span>
+      </div>
+      <div class="ig-tile ig-7">
+        <span class="num">3</span>
+        <span class="s">sábados libres · marzo</span>
+      </div>
+      <div class="ig-tile ig-8 is-dark">
+        <span class="t">"Fue inolvidable. Todos preguntaron por uds."</span>
+      </div>
+      <div class="ig-tile ig-9">
+        <span class="t">Reservá tu fecha</span>
+        <span class="cta">DM →</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover__meta">
+    <div class="cell">Documento <b>Estrategia Digital</b></div>
+    <div class="cell">Versión <b>1.0 · 2026</b></div>
+    <div class="cell">Horizonte <b>90 días + 6 meses</b></div>
+    <div class="cell">Origen <b>Villarrica · Paraguay</b></div>
+  </div>
+</header>
+
+<!-- ============ 01 · MANIFIESTO ============ -->
+<section id="manifesto" class="section manifesto">
+  <div class="wrap">
+    <div class="kicker" data-reveal>01 — Contexto</div>
+    <div class="manifesto__grid">
+      <div class="manifesto__big" data-reveal>Antes de la fiesta hay <span>una decisión.</span> Y se toma scrolleando.</div>
+      <div class="manifesto__body" data-reveal data-d="2">
+        <p>Las familias paraguayas eligen quién organiza el cumpleaños entre el grupo de WhatsApp con la abuela, el feed de Instagram a la una de la mañana, y un par de stories que vieron sin proponérselo.</p>
+        <p><strong>La marca que aparezca con claridad, calidez y cariño en ese momento — gana la reserva.</strong> Y la que aparezca al día siguiente también, cuando la mamá vuelve a buscarla.</p>
+        <p>Esta no es una estrategia de "redes sociales". Es una estrategia de <strong>presencia digital</strong>: cómo se ve, se siente y se conversa con Mba'ekue Kids en cada micro-momento del recorrido familiar — desde el primer Reel hasta la última story del salón.</p>
+      </div>
+    </div>
+
+    <div class="context-stats">
+      <div class="cstat" data-reveal>
+        <div class="big">3<span class="unit">de 4</span></div>
+        <h6>Mamás investigan antes de mensajear</h6>
+        <p>Visitan al menos un perfil de Instagram antes de iniciar la conversación con un proveedor de cumpleaños.</p>
+      </div>
+      <div class="cstat" data-reveal data-d="1">
+        <div class="big">68<span class="unit">%</span></div>
+        <h6>De reservas pasan por DM</h6>
+        <p>El primer punto de contacto suele ser un mensaje directo en Instagram, antes que un formulario o llamada.</p>
+      </div>
+      <div class="cstat" data-reveal data-d="2">
+        <div class="big">14<span class="unit">días</span></div>
+        <h6>Ventana promedio de decisión</h6>
+        <p>El tiempo que pasa entre "estamos pensando hacer el cumple" y "ya reservamos" — y todo ocurre en el feed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 · OBJETIVOS ============ -->
+<section id="goals" class="section goals">
+  <div class="wrap">
+    <div class="kicker" data-reveal>02 — Objetivos estratégicos</div>
+    <div class="goals__head">
+      <h2 data-reveal data-d="1">Tres metas claras.<br/>Una agenda completa.</h2>
+      <p data-reveal data-d="2">La estrategia se sostiene sobre tres objetivos jerárquicos que cubren todo el embudo: que nos descubran, que se queden cerca, y que terminen reservando. Cada uno con su métrica y su meta concreta a 6 meses.</p>
+    </div>
+
+    <div class="goal-grid">
+      <article class="goal" data-reveal data-d="1">
+        <div class="num">01</div>
+        <div class="stage">Awareness</div>
+        <h3>Reconocimiento de marca</h3>
+        <p>Que toda mamá organizadora de Villarrica nos cruce en su feed al menos tres veces antes de tener que decidir un proveedor.</p>
+        <div class="kpi">KPI principal <b>Alcance único mensual</b></div>
+      </article>
+      <article class="goal" data-reveal data-d="2">
+        <div class="num">02</div>
+        <div class="stage">Engagement</div>
+        <h3>Comunidad activa</h3>
+        <p>Construir un público que guarda, comparte, comenta y nos elige antes de comparar — porque ya se siente parte de la marca.</p>
+        <div class="kpi">KPI principal <b>Engagement rate + saves</b></div>
+      </article>
+      <article class="goal" data-reveal data-d="3">
+        <div class="num">03</div>
+        <div class="stage">Conversion</div>
+        <h3>Reservas directas</h3>
+        <p>Convertir el interés digital en reservas que llegan limpias por WhatsApp, con la fecha decidida y con menos fricción operativa.</p>
+        <div class="kpi">KPI principal <b>Reservas atribuidas a redes</b></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 · AUDIENCIA ============ -->
+<section id="audience" class="section audience">
+  <div class="wrap">
+    <div class="kicker" data-reveal>03 — Audiencia</div>
+    <div class="audience__head">
+      <h2 data-reveal data-d="1">No hablamos a<br/>"todo el mundo".</h2>
+      <p class="lead" data-reveal data-d="2">Tres perfiles concentran el 90% de las decisiones de cumpleaños en Villarrica. Reconocer cómo busca, qué le preocupa y dónde decide cada uno nos permite escribir contenido que se sienta hecho para ellos — no genérico.</p>
+    </div>
+
+    <div class="persona-grid">
+      <article class="persona" data-reveal data-d="1">
+        <div class="av">L</div>
+        <div class="role">Persona 01</div>
+        <h4>La planificadora atenta</h4>
+        <div class="age">Mamá · 32–40 años</div>
+        <blockquote>"Quiero que sea perfecto, pero también poder disfrutarlo."</blockquote>
+        <dl>
+          <div><dt>Plataforma</dt><dd>Instagram + WhatsApp</dd></div>
+          <div><dt>Comporta</dt><dd>Sigue cuentas de eventos. Guarda muchas referencias antes de mensajear.</dd></div>
+          <div><dt>Dolor</dt><dd>El estrés de "que no me falte nada" y "que igual lo disfrute yo".</dd></div>
+          <div><dt>Contenido</dt><dd>Carruseles de tips, reels de detalles, testimonios reales.</dd></div>
+        </dl>
+      </article>
+
+      <article class="persona" data-reveal data-d="2">
+        <div class="av">M</div>
+        <div class="role">Persona 02</div>
+        <h4>El papá delegador</h4>
+        <div class="age">Papá · 35–45 años</div>
+        <blockquote>"Pasame el link y te transfiero."</blockquote>
+        <dl>
+          <div><dt>Plataforma</dt><dd>WhatsApp · Instagram (validación)</dd></div>
+          <div><dt>Comporta</dt><dd>Decisor económico. No investiga, confirma. Quiere rápido, claro y memorable.</dd></div>
+          <div><dt>Dolor</dt><dd>Quedar mal con su hijo/a. Que algo falle el día.</dd></div>
+          <div><dt>Contenido</dt><dd>Posts directos con paquete + precio. Reels cortos de 15s.</dd></div>
+        </dl>
+      </article>
+
+      <article class="persona" data-reveal data-d="3">
+        <div class="av">A</div>
+        <div class="role">Persona 03</div>
+        <h4>Los abuelos sorpresa</h4>
+        <div class="age">Abuelos · 55–70 años</div>
+        <blockquote>"Que sea inolvidable, no me importa el resto."</blockquote>
+        <dl>
+          <div><dt>Plataforma</dt><dd>WhatsApp (boca a boca) · Facebook</dd></div>
+          <div><dt>Comporta</dt><dd>Llegan por recomendación de un hijo. Quieren simplicidad y cariño.</dd></div>
+          <div><dt>Dolor</dt><dd>No entender bien lo que están contratando.</dd></div>
+          <div><dt>Contenido</dt><dd>Historias visuales simples, testimonios largos, fotos de familia.</dd></div>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 · PILARES DE CONTENIDO ============ -->
+<section id="pillars" class="section pillars">
+  <div class="wrap">
+    <div class="kicker" data-reveal>04 — Pilares de contenido</div>
+    <div class="pillars__head">
+      <h2 data-reveal data-d="1">Cinco temas.<br/>Una sola voz.</h2>
+      <p data-reveal data-d="2">El feed se ordena alrededor de cinco pilares que rotan en cantidad pero nunca en presencia. Cada post pertenece a uno solo — y los pilares no entran a competir entre sí: se complementan a lo largo de la semana y el mes.</p>
+    </div>
+
+    <div class="pillar-list">
+      <div class="pillar-row" data-reveal>
+        <div class="num">01</div>
+        <div class="pct">25<small>%</small></div>
+        <div><h4>Inspiración</h4></div>
+        <div><p>Ideas, temáticas, decoración, paletas. Que cada post haga decir "quiero eso para mi hijo".</p></div>
+        <span class="fmt">Reel + Carrusel</span>
+      </div>
+      <div class="pillar-row" data-reveal data-d="1">
+        <div class="num">02</div>
+        <div class="pct">20<small>%</small></div>
+        <div><h4>Tras bambalinas</h4></div>
+        <div><p>Cómo trabajamos, el equipo, el proceso. Humaniza la marca y reduce la fricción de la reserva.</p></div>
+        <span class="fmt">Reel + Story</span>
+      </div>
+      <div class="pillar-row" data-reveal data-d="2">
+        <div class="num">03</div>
+        <div class="pct">20<small>%</small></div>
+        <div><h4>Voces felices</h4></div>
+        <div><p>Testimonios reales, fragmentos del día, reacciones de los chicos. La prueba social como motor.</p></div>
+        <span class="fmt">Reel + Post</span>
+      </div>
+      <div class="pillar-row" data-reveal data-d="3">
+        <div class="num">04</div>
+        <div class="pct">20<small>%</small></div>
+        <div><h4>Tips prácticos</h4></div>
+        <div><p>Consejos para planificar sin estrés. Convierten a la marca en una fuente útil, no solo en un servicio.</p></div>
+        <span class="fmt">Carrusel + Reel</span>
+      </div>
+      <div class="pillar-row" data-reveal data-d="4">
+        <div class="num">05</div>
+        <div class="pct">15<small>%</small></div>
+        <div><h4>Servicios y disponibilidad</h4></div>
+        <div><p>Paquetes, fechas, promociones puntuales. Pocos pero claros — anclan la conversión cuando llega el momento.</p></div>
+        <span class="fmt">Post + Story</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 · VOZ ============ -->
+<section id="voice" class="section voice">
+  <div class="wrap">
+    <div class="kicker" data-reveal>05 — Tono de voz</div>
+    <h2 class="voice__title" data-reveal data-d="1">Hablamos como<br/>celebramos.</h2>
+    <p class="voice__lead" data-reveal data-d="2">Cálidos sin ser empalagosos. Claros sin ser fríos. Lúdicos sin ser infantiles. La voz de Mba'ekue Kids en redes es la de un amigo organizado y de buen humor: tiene todo listo, pero igual te ofrece una sonrisa.</p>
+
+    <div class="voice-attributes">
+      <div class="attr" data-reveal data-d="1"><h5>Cálido</h5><p>Primera persona del plural. Hablamos con cariño, no con marketing.</p></div>
+      <div class="attr" data-reveal data-d="2"><h5>Claro</h5><p>Frases cortas, verbos directos. Si una madre apurada no lo entiende en 3 segundos, lo reescribimos.</p></div>
+      <div class="attr" data-reveal data-d="3"><h5>Lúdico</h5><p>Guiños, juegos de palabras, exclamaciones suaves. Nunca diminutivos forzados.</p></div>
+      <div class="attr" data-reveal data-d="4"><h5>Confiable</h5><p>Horarios, precios y compromisos se comunican con seriedad: la calidez no nos quita la precisión.</p></div>
+    </div>
+
+    <div class="voice-platforms">
+      <div class="vp" data-reveal data-d="1">
+        <span class="pf">Instagram</span>
+        <div class="sample">"Imaginate este sábado. Una torta enorme, globos por todos lados, y los chicos riéndose tanto que vos también. Eso hacemos."</div>
+        <small>Cálido + visual · Caption tipo</small>
+      </div>
+      <div class="vp" data-reveal data-d="2">
+        <span class="pf">TikTok</span>
+        <div class="sample">"Te enseñamos a planificar un cumpleaños sin volverte loca. En tres pasos. Le doy play."</div>
+        <small>Lúdico + irreverente suave · Hook tipo</small>
+      </div>
+      <div class="vp" data-reveal data-d="3">
+        <span class="pf">WhatsApp</span>
+        <div class="sample">"¡Hola! Vi que escribiste para reservar el 22. Te paso disponibilidad y valores limpitos en un toque 🎈"</div>
+        <small>Directo + servicial · Primer mensaje</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 · COLOR ============ -->
+<section id="color" class="section colors">
+  <div class="wrap">
+    <div class="kicker" data-reveal>06 — Paleta cromática</div>
+    <div class="colors__intro">
+      <h2 data-reveal data-d="1">Seis colores<br/>que hablan por nosotros.</h2>
+      <p class="lead" data-reveal data-d="2">Cada post, story y reel se construye con la paleta oficial de la marca. El naranja sorpresa lidera la identidad; los demás funcionan como acentos rotativos que aportan ritmo al feed sin perder reconocimiento.</p>
+    </div>
+
+    <div class="color-grid">
+      <div class="swatch sw-naranja" data-reveal>
+        <div class="top"><span class="name">Naranja</span><span class="sub">Primario</span></div>
+        <div><div class="name" style="font-size:36px;">sorpresa</div><div class="codes" style="margin-top:14px;"><b>HEX</b> #FF7300<br/><b>RGB</b> 255 · 115 · 0<br/><b>CMYK</b> 0 · 68 · 100 · 0</div></div>
+      </div>
+      <div class="swatch sw-azul" data-reveal data-d="1">
+        <div class="top"><span class="name">Azul</span><span class="sub">Soporte</span></div>
+        <div><div class="name" style="font-size:36px;">brisa</div><div class="codes" style="margin-top:14px;"><b>HEX</b> #0061EE<br/><b>RGB</b> 0 · 97 · 238<br/><b>CMYK</b> 83 · 64 · 0 · 0</div></div>
+      </div>
+      <div class="swatch sw-rojo" data-reveal data-d="2">
+        <div class="top"><span class="name">Rojo</span><span class="sub">Acento</span></div>
+        <div><div class="name" style="font-size:36px;">festejo</div><div class="codes" style="margin-top:14px;"><b>HEX</b> #E83023<br/><b>RGB</b> 232 · 48 · 35<br/><b>CMYK</b> 3 · 95 · 100 · 0</div></div>
+      </div>
+      <div class="swatch sw-verde" data-reveal data-d="3">
+        <div class="top"><span class="name">Verde</span><span class="sub">Soporte</span></div>
+        <div><div class="name" style="font-size:36px;">aventura</div><div class="codes" style="margin-top:14px;"><b>HEX</b> #00A652<br/><b>RGB</b> 0 · 166 · 82<br/><b>CMYK</b> 83 · 6 · 95 · 0</div></div>
+      </div>
+      <div class="swatch sw-rosa" data-reveal data-d="4">
+        <div class="top"><span class="name">Rosa</span><span class="sub">Acento</span></div>
+        <div><div class="name" style="font-size:36px;">confeti</div><div class="codes" style="margin-top:14px;"><b>HEX</b> #FF77B9<br/><b>RGB</b> 255 · 119 · 185<br/><b>CMYK</b> 0 · 67 · 0 · 0</div></div>
+      </div>
+      <div class="swatch sw-amarillo" data-reveal data-d="5">
+        <div class="top"><span class="name">Amarillo</span><span class="sub">Soporte</span></div>
+        <div><div class="name" style="font-size:36px;">fiesta</div><div class="codes" style="margin-top:14px;"><b>HEX</b> #FECE00<br/><b>RGB</b> 254 · 206 · 0<br/><b>CMYK</b> 1 · 18 · 100 · 0</div></div>
+      </div>
+    </div>
+
+    <div class="color-use">
+      <div>
+        <h6>Regla 60/30/10 para feed</h6>
+      </div>
+      <div>
+        <p>Cada post se compone con <strong>un color dominante</strong> que ocupa el 60% del área, <strong>un color de soporte</strong> que ocupa el 30%, y <strong>un color de acento</strong> reservado para botones, números o palabras clave (10%). Así el feed mantiene ritmo y diversidad sin volverse arcoíris.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 · TIPOGRAFÍA ============ -->
+<section id="type" class="section typography">
+  <div class="wrap">
+    <div class="kicker" data-reveal>07 — Sistema tipográfico</div>
+    <div class="typography__head">
+      <h2 data-reveal data-d="1">Dos familias.<br/>Mil personalidades.</h2>
+      <p data-reveal data-d="2">Una pareja tipográfica simple pero expresiva: una script cargada de emoción para los titulares emocionales, y una sans geométrica para la información operativa. Juntas construyen jerarquía sin perder espíritu lúdico.</p>
+    </div>
+
+    <article class="font-card" data-reveal>
+      <div class="meta">
+        <div class="role">Display · Emoción</div>
+        <h3>Sunset Journey</h3>
+        <p>Script amigable, redondeada, llena de personalidad. Se reserva para titulares emocionales, firmas y palabras clave que necesitan transmitir cercanía.</p>
+        <div class="weights"><span>Regular</span><span>Bold</span></div>
+      </div>
+      <div class="sample-display">Hagamos magia.</div>
+    </article>
+
+    <article class="font-card" data-reveal data-d="1">
+      <div class="meta">
+        <div class="role">Body · Estructura</div>
+        <h3>Gotham</h3>
+        <p>Sans-serif moderna y confiable. Vehícula textos largos, señalética digital y datos operativos con claridad. Aporta el contrapeso geométrico que la script necesita.</p>
+        <div class="weights"><span>Thin</span><span>Book</span><span>Bold</span></div>
+      </div>
+      <div class="sample-sans">Simple,<br/>práctico y<br/>divertido.</div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ 08 · PLATAFORMAS ============ -->
+<section id="platforms" class="section platforms">
+  <div class="wrap">
+    <div class="kicker" data-reveal>08 — Estrategia por plataforma</div>
+    <div class="platforms__head">
+      <h2 data-reveal data-d="1">No hacemos lo mismo<br/>en todos lados.</h2>
+      <p class="lead" data-reveal data-d="2">Cada plataforma tiene un rol distinto en el embudo. Instagram es el hogar, TikTok abre la puerta y WhatsApp cierra la reserva. Las tres funcionan como un sistema único, no como cuentas paralelas.</p>
+    </div>
+
+    <div class="platform-grid">
+      <article class="platform is-1" data-reveal data-d="1">
+        <div class="head"><div class="badge">IG</div><div><div class="name">Instagram</div></div></div>
+        <span class="tier">Plataforma primaria</span>
+        <div class="row"><dt>Rol</dt><dd><b>Hogar principal</b> de la marca</dd></div>
+        <div class="row"><dt>Formato</dt><dd>Reels + Carruseles</dd></div>
+        <div class="row"><dt>Cadencia</dt><dd>4–5 posts + stories diarias</dd></div>
+        <div class="row"><dt>KPI</dt><dd>Alcance, saves, DMs hacia WhatsApp</dd></div>
+      </article>
+
+      <article class="platform is-2" data-reveal data-d="2">
+        <div class="head"><div class="badge">TT</div><div><div class="name">TikTok</div></div></div>
+        <span class="tier">Crecimiento + alcance</span>
+        <div class="row"><dt>Rol</dt><dd><b>Conquistar audiencia nueva</b></dd></div>
+        <div class="row"><dt>Formato</dt><dd>Videos cortos virales (8–20s)</dd></div>
+        <div class="row"><dt>Cadencia</dt><dd>3 posts por semana</dd></div>
+        <div class="row"><dt>KPI</dt><dd>Views, follow conversion rate</dd></div>
+      </article>
+
+      <article class="platform is-4" data-reveal data-d="3">
+        <div class="head"><div class="badge">W</div><div><div class="name">WhatsApp</div></div></div>
+        <span class="tier">Conversión + retención</span>
+        <div class="row"><dt>Rol</dt><dd><b>Donde se cierra la reserva</b></dd></div>
+        <div class="row"><dt>Formato</dt><dd>Catálogo, listas, plantillas</dd></div>
+        <div class="row"><dt>Cadencia</dt><dd>Respuesta &lt;30 min · broadcast 1x/mes</dd></div>
+        <div class="row"><dt>KPI</dt><dd>Tasa de conversación → reserva</dd></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 · FORMATOS ============ -->
+<section id="formats" class="section formats">
+  <div class="wrap">
+    <div class="kicker" data-reveal>09 — Mix de formatos</div>
+    <div class="formats__head">
+      <h2 data-reveal data-d="1">El motor son los reels.<br/>El resto, lo demás.</h2>
+      <p class="lead" data-reveal data-d="2">Los algoritmos de 2026 premian el video corto, vertical y emocional. Reels y videos cortos concentran el 50% del esfuerzo creativo, mientras los demás formatos sostienen la conversión y la comunidad.</p>
+    </div>
+
+    <div class="formats-mix">
+      <div class="format-chart" data-reveal></div>
+      <div class="format-list">
+        <div class="format-item" data-reveal data-d="1">
+          <span class="swatch-dot" style="background:var(--rojo)"></span>
+          <div><h6>Reels & TikToks</h6><p>El motor de alcance. Storytelling, hook fuerte, payoff visual.</p></div>
+          <span class="pct">50<small style="font-size:14px">%</small></span>
+        </div>
+        <div class="format-item" data-reveal data-d="2">
+          <span class="swatch-dot" style="background:var(--azul)"></span>
+          <div><h6>Carruseles</h6><p>Profundidad y permanencia. Generan los mayores saves del feed.</p></div>
+          <span class="pct">25<small style="font-size:14px">%</small></span>
+        </div>
+        <div class="format-item" data-reveal data-d="3">
+          <span class="swatch-dot" style="background:var(--verde)"></span>
+          <div><h6>Stories</h6><p>A diario, 10–12 frames. Producto, agenda, comunidad cercana.</p></div>
+          <span class="pct">10<small style="font-size:14px">%</small></span>
+        </div>
+        <div class="format-item" data-reveal data-d="4">
+          <span class="swatch-dot" style="background:var(--rosa)"></span>
+          <div><h6>Posts simples</h6><p>Mensajes evergreen: paquetes, disponibilidad, hitos.</p></div>
+          <span class="pct">10<small style="font-size:14px">%</small></span>
+        </div>
+        <div class="format-item" data-reveal data-d="5">
+          <span class="swatch-dot" style="background:var(--ink)"></span>
+          <div><h6>Lives mensuales</h6><p>Q&A, reservas en vivo, conversación directa con la comunidad.</p></div>
+          <span class="pct">5<small style="font-size:14px">%</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 · CALENDARIO ============ -->
+<section id="calendar" class="section calendar">
+  <div class="wrap">
+    <div class="kicker" data-reveal>10 — Calendario editorial semanal</div>
+    <div class="calendar__head">
+      <h2 data-reveal data-d="1">Una semana,<br/>una conversación completa.</h2>
+      <p class="lead" data-reveal data-d="2">Cada día tiene un pilar asignado para que el feed mantenga ritmo y previsibilidad. Las stories diarias se construyen sobre lo que el equipo va viviendo en el salón — y los sábados se transmiten en vivo desde los eventos.</p>
+    </div>
+
+    <div class="cal-grid" data-reveal>
+      <div class="cal-day">
+        <span class="lbl">Lunes</span>
+        <div class="item is-azul"><span class="pillar">Tips prácticos</span><span>Carrusel de 5 errores al planificar</span></div>
+        <div class="story">Story · saludo + agenda</div>
+      </div>
+      <div class="cal-day">
+        <span class="lbl">Martes</span>
+        <div class="item is-naranja"><span class="pillar">Voces felices</span><span>Reel testimonio del último evento</span></div>
+        <div class="story">Story · BTS preparando</div>
+      </div>
+      <div class="cal-day">
+        <span class="lbl">Miércoles</span>
+        <div class="item is-rosa" style="background:var(--rosa)"><span class="pillar">Inspiración</span><span>Carrusel temática del mes</span></div>
+        <div class="story">Story · encuesta de temática</div>
+      </div>
+      <div class="cal-day">
+        <span class="lbl">Jueves</span>
+        <div class="item is-verde"><span class="pillar">Tras bambalinas</span><span>Reel "24h antes de un cumple"</span></div>
+        <div class="story">Story · equipo en acción</div>
+      </div>
+      <div class="cal-day">
+        <span class="lbl">Viernes</span>
+        <div class="item is-rojo"><span class="pillar">Servicios</span><span>Disponibilidad próximo finde</span></div>
+        <div class="story">Story · CTA reservar</div>
+      </div>
+      <div class="cal-day">
+        <span class="lbl">Sábado</span>
+        <div class="item is-amarillo"><span class="pillar">Live del salón</span><span>Cobertura del cumple en stories</span></div>
+        <div class="story">Story · live cumpleaños</div>
+      </div>
+      <div class="cal-day">
+        <span class="lbl">Domingo</span>
+        <div class="item is-naranja" style="background:linear-gradient(135deg,var(--naranja),var(--rosa))"><span class="pillar">Voces felices</span><span>Reel emocional de cierre</span></div>
+        <div class="story">Story · agradecimiento</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11 · IDEAS ============ -->
+<section id="ideas" class="section ideas">
+  <div class="wrap">
+    <div class="kicker" data-reveal>11 — Banco de ideas inicial</div>
+    <div class="ideas__head">
+      <h2 data-reveal data-d="1">Doce ideas para<br/>encender el feed.</h2>
+      <p class="lead" data-reveal data-d="2">Una primera tanda concreta de conceptos que aterrizan la estrategia. Cada una tiene formato, pilar de origen y un ángulo emocional definido — listas para guionar y producir desde el día uno.</p>
+    </div>
+
+    <div class="idea-grid">
+      <article class="idea" data-reveal data-fmt="reel">
+        <div class="meta"><span class="num">01</span><span class="fmt">Reel</span></div>
+        <h4>"Día –3, día –2, día –1, día del cumple"</h4>
+        <p>Countdown emocional con escenas mínimas: la lista, los globos, el salón vacío, los chicos entrando.</p>
+        <div class="pillar-tag">Voces felices</div>
+      </article>
+      <article class="idea" data-reveal data-d="1" data-fmt="carrusel">
+        <div class="meta"><span class="num">02</span><span class="fmt">Carrusel</span></div>
+        <h4>"5 errores comunes al planificar el cumple"</h4>
+        <p>Educativo, con un giro humorístico. Termina invitando a delegar — sin venta dura.</p>
+        <div class="pillar-tag">Tips prácticos</div>
+      </article>
+      <article class="idea" data-reveal data-d="2" data-fmt="reel">
+        <div class="meta"><span class="num">03</span><span class="fmt">Reel</span></div>
+        <h4>"Lo que pasa cuando la torta entra al salón"</h4>
+        <p>Recopilación de reacciones reales de chicos. Audio emotivo. Sin guion, solo cariño.</p>
+        <div class="pillar-tag">Voces felices</div>
+      </article>
+      <article class="idea" data-reveal data-fmt="carrusel">
+        <div class="meta"><span class="num">04</span><span class="fmt">Carrusel</span></div>
+        <h4>"Cómo elegir la temática perfecta según tu hijo"</h4>
+        <p>Guía por edades + intereses. Termina invitando a un test rápido por DM.</p>
+        <div class="pillar-tag">Inspiración</div>
+      </article>
+      <article class="idea" data-reveal data-d="1" data-fmt="reel">
+        <div class="meta"><span class="num">05</span><span class="fmt">Reel</span></div>
+        <h4>"24 horas antes de un cumpleaños"</h4>
+        <p>Tras bambalinas estilo timelapse. Muestra el cuidado y la logística — genera confianza.</p>
+        <div class="pillar-tag">Tras bambalinas</div>
+      </article>
+      <article class="idea" data-reveal data-d="2" data-fmt="post">
+        <div class="meta"><span class="num">06</span><span class="fmt">Post</span></div>
+        <h4>"Marzo · solo 3 sábados disponibles"</h4>
+        <p>Post directo de disponibilidad. Crea urgencia real sin trucos. CTA a WhatsApp.</p>
+        <div class="pillar-tag">Servicios</div>
+      </article>
+      <article class="idea" data-reveal data-fmt="reel">
+        <div class="meta"><span class="num">07</span><span class="fmt">Reel</span></div>
+        <h4>"Sofía cumplió 5 y su mamá nos cuenta"</h4>
+        <p>Mini-doc de 45 segundos. Testimonio honesto, sin guion, con material del día.</p>
+        <div class="pillar-tag">Voces felices</div>
+      </article>
+      <article class="idea" data-reveal data-d="1" data-fmt="carrusel">
+        <div class="meta"><span class="num">08</span><span class="fmt">Carrusel</span></div>
+        <h4>"7 cosas que no pueden faltar en un setup mínimo"</h4>
+        <p>Lista útil + visual de cada elemento. Termina con un guiño: "o llamanos y lo armamos".</p>
+        <div class="pillar-tag">Tips prácticos</div>
+      </article>
+      <article class="idea" data-reveal data-d="2" data-fmt="reel">
+        <div class="meta"><span class="num">09</span><span class="fmt">Reel</span></div>
+        <h4>"Cumpleaños con presupuesto chico, mismo cariño"</h4>
+        <p>Rompe la idea de "Mba'ekue solo para fiestas caras". Inclusivo, real, accesible.</p>
+        <div class="pillar-tag">Inspiración</div>
+      </article>
+      <article class="idea" data-reveal data-fmt="story">
+        <div class="meta"><span class="num">10</span><span class="fmt">Story</span></div>
+        <h4>"¿Súper héroes o princesas? Votá"</h4>
+        <p>Sticker interactivo. Activa engagement bajo y rápido. Genera data útil para temáticas.</p>
+        <div class="pillar-tag">Inspiración</div>
+      </article>
+      <article class="idea" data-reveal data-d="1" data-fmt="reel">
+        <div class="meta"><span class="num">11</span><span class="fmt">Reel</span></div>
+        <h4>"La cara de los chicos al entrar al salón"</h4>
+        <p>Compilado de 4–5 reacciones de cumpleaños diferentes. El recurso más fuerte que tenemos.</p>
+        <div class="pillar-tag">Voces felices</div>
+      </article>
+      <article class="idea" data-reveal data-d="2" data-fmt="carrusel">
+        <div class="meta"><span class="num">12</span><span class="fmt">Carrusel</span></div>
+        <h4>"Manual rápido para la madrina organizadora"</h4>
+        <p>Para tías, madrinas, abuelas. Reformula la marca como "tu aliada", no "tu proveedora".</p>
+        <div class="pillar-tag">Tips prácticos</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12 · FUNNEL ============ -->
+<section id="funnel" class="section funnel">
+  <div class="wrap">
+    <div class="kicker" data-reveal>12 — Funnel social</div>
+    <div class="funnel__head">
+      <h2 data-reveal data-d="1">Del scroll<br/>a la torta.</h2>
+      <p data-reveal data-d="2">Cada pieza de contenido cumple un rol distinto en el recorrido de la familia: nos descubre, nos compara, nos elige y nos vuelve a llamar. Saber dónde está cada post nos permite no pedirle lo que no puede dar.</p>
+    </div>
+
+    <div class="fn-track">
+      <div class="fn-stage s1" data-reveal>
+        <div class="ldr">
+          <div class="stage-num">Etapa 01</div>
+          <h4>Descubrimiento</h4>
+          <div class="metric">Métrica · Alcance único</div>
+        </div>
+        <p class="content">Reels virales, TikToks con hook fuerte, contenido aspiracional. Acá no vendemos: nos hacemos notar. Objetivo: aparecer en el feed de mamás que ni sabían que necesitaban una marca como nosotros.</p>
+      </div>
+      <div class="fn-stage s2" data-reveal data-d="1">
+        <div class="ldr">
+          <div class="stage-num">Etapa 02</div>
+          <h4>Consideración</h4>
+          <div class="metric">Métrica · Saves + visitas al perfil</div>
+        </div>
+        <p class="content">Carruseles educativos, testimonios, tras bambalinas. La familia ya nos vio: ahora investiga. Acá ganamos confianza y ofrecemos pruebas de que somos quien decimos ser.</p>
+      </div>
+      <div class="fn-stage s3" data-reveal data-d="2">
+        <div class="ldr">
+          <div class="stage-num">Etapa 03</div>
+          <h4>Decisión</h4>
+          <div class="metric">Métrica · Conversaciones por DM</div>
+        </div>
+        <p class="content">Posts de servicios, stories con CTA, disponibilidad concreta. La familia está lista: facilitamos la reserva. Sin formularios fríos: WhatsApp directo, respuesta humana, valores claros.</p>
+      </div>
+      <div class="fn-stage s4" data-reveal data-d="3">
+        <div class="ldr">
+          <div class="stage-num">Etapa 04</div>
+          <h4>Retención</h4>
+          <div class="metric">Métrica · Repeat bookings + referrals</div>
+        </div>
+        <p class="content">Stories destacadas, comunidad WhatsApp, recordatorios anuales. El cumpleaños se repite. Acá sembramos el del año que viene — y el de los hermanos, primos, ahijados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 · KPIs ============ -->
+<section id="kpis" class="section kpis">
+  <div class="wrap">
+    <div class="kicker" data-reveal>13 — Métricas y metas</div>
+    <div class="kpis__head">
+      <h2 data-reveal data-d="1">Lo que medimos<br/>es lo que mejora.</h2>
+      <p class="lead" data-reveal data-d="2">Una sola métrica norte y un cuadro operativo de seguimiento por plataforma. Lo que no aparece acá, no se reporta. Y lo que aparece, se revisa cada 14 días en equipo.</p>
+    </div>
+
+    <div class="north-star" data-reveal>
+      <div>
+        <div class="lbl">North Star Metric</div>
+        <h3>Reservas mensuales atribuidas a redes sociales</h3>
+      </div>
+      <div class="targets">
+        <div class="t"><div class="q">Hoy</div><div class="v">~6<small>/mes</small></div></div>
+        <div class="t"><div class="q">+ 3 meses</div><div class="v">15<small>/mes</small></div></div>
+        <div class="t"><div class="q">+ 6 meses</div><div class="v">30<small>/mes</small></div></div>
+      </div>
+    </div>
+
+    <div class="kpi-table" data-reveal data-d="1">
+      <div class="kpi-row is-head">
+        <div>Métrica</div><div>Plataforma</div><div>Hoy</div><div>+3 meses</div><div>+6 meses</div>
+      </div>
+      <div class="kpi-row">
+        <div class="name">Alcance mensual<small>Cuentas únicas alcanzadas</small></div>
+        <div class="plat">Instagram</div>
+        <div class="v now">40k</div><div class="v goal-3m">120k</div><div class="v goal-6m">250k</div>
+      </div>
+      <div class="kpi-row">
+        <div class="name">Engagement rate<small>Interacciones / alcance</small></div>
+        <div class="plat">Instagram</div>
+        <div class="v now">2.4<small>%</small></div><div class="v goal-3m">4<small>%</small></div><div class="v goal-6m">6<small>%</small></div>
+      </div>
+      <div class="kpi-row">
+        <div class="name">DMs entrantes<small>Conversaciones iniciadas</small></div>
+        <div class="plat">IG + WhatsApp</div>
+        <div class="v now">8<small>/sem</small></div><div class="v goal-3m">25<small>/sem</small></div><div class="v goal-6m">60<small>/sem</small></div>
+      </div>
+      <div class="kpi-row">
+        <div class="name">Tasa conversación → reserva<small>De DM a fecha confirmada</small></div>
+        <div class="plat">WhatsApp</div>
+        <div class="v now">22<small>%</small></div><div class="v goal-3m">35<small>%</small></div><div class="v goal-6m">45<small>%</small></div>
+      </div>
+      <div class="kpi-row">
+        <div class="name">Views totales<small>Suma de plays orgánicos</small></div>
+        <div class="plat">TikTok</div>
+        <div class="v now">—</div><div class="v goal-3m">200k</div><div class="v goal-6m">800k</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 14 · ROADMAP ============ -->
+<section id="roadmap" class="section roadmap">
+  <div class="wrap">
+    <div class="kicker" data-reveal>14 — Roadmap 90 días</div>
+    <div class="roadmap__head">
+      <h2 data-reveal data-d="1">Tres meses<br/>para poner todo<br/>en marcha.</h2>
+      <p class="lead" data-reveal data-d="2">Una hoja de ruta de cuatro fases que ordena la implementación sin saturar al equipo. Las dos primeras concentran setup y producción; las últimas dos, optimización en base a data real, no a intuición.</p>
+    </div>
+
+    <div class="roadmap-track">
+      <article class="phase" data-c="naranja" data-reveal>
+        <div class="left">
+          <span class="pill">Fase 01</span>
+          <h3>Setup y auditoría</h3>
+          <span class="time">Semanas 1 – 2</span>
+        </div>
+        <div class="right"><ul>
+          <li>Auditoría completa de cuentas existentes (IG, FB, WhatsApp Business).</li>
+          <li>Optimización de bio, destacados de stories y link en bio (linktree o equivalente).</li>
+          <li>Producción del pack inicial de templates Reels + Carruseles + Stories.</li>
+          <li>Setup de catálogo y plantillas en WhatsApp Business.</li>
+          <li>Calendario editorial del primer mes cargado y aprobado.</li>
+        </ul></div>
+      </article>
+
+      <article class="phase" data-c="azul" data-reveal data-d="1">
+        <div class="left">
+          <span class="pill">Fase 02</span>
+          <h3>Lanzamiento y cadencia</h3>
+          <span class="time">Semanas 3 – 6</span>
+        </div>
+        <div class="right"><ul>
+          <li>Arranque oficial de cadencia diaria de stories + 4 posts semanales.</li>
+          <li>Producción del primer Reel "ancla" pensado para alcance (meta: 50k views).</li>
+          <li>Activación de TikTok con 3 videos semanales reutilizando assets de IG.</li>
+          <li>A/B testing de hooks, CTAs y horarios de publicación.</li>
+        </ul></div>
+      </article>
+
+      <article class="phase" data-c="verde" data-reveal data-d="2">
+        <div class="left">
+          <span class="pill">Fase 03</span>
+          <h3>Optimización en base a data</h3>
+          <span class="time">Semanas 7 – 10</span>
+        </div>
+        <div class="right"><ul>
+          <li>Análisis de qué pilar performa mejor por plataforma y reasignación de presupuesto creativo.</li>
+          <li>Producción de un mini-documental del salón en Villarrica para usar como contenido ancla.</li>
+          <li>Primera campaña paga liviana (Meta Ads) para amplificar el Reel ancla.</li>
+          <li>Activación de comunidad WhatsApp Broadcast para clientes pasados.</li>
+        </ul></div>
+      </article>
+
+      <article class="phase" data-c="rojo" data-reveal data-d="3">
+        <div class="left">
+          <span class="pill">Fase 04</span>
+          <h3>Escalado y rituales</h3>
+          <span class="time">Semanas 11 – 12 +</span>
+        </div>
+        <div class="right"><ul>
+          <li>Primer Live mensual fijo: Q&A + apertura de reservas.</li>
+          <li>Programa de referidos en redes ("invitá a una mamá amiga y descontá").</li>
+          <li>Partnerships con 2–3 micro-influencers locales (mamás, kids).</li>
+          <li>Reporte y revisión del trimestre · ajustes al plan v1.1.</li>
+        </ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CIERRE ============ -->
+<section id="close" class="close">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="close__inner wrap">
+    <div class="eyebrow">Cierre ejecutivo</div>
+    <h2>Una historia <em>bien contada</em><br/>es una agenda llena.</h2>
+    <p>Esta estrategia no termina al cerrar este documento: empieza el lunes que viene, en el primer post planificado, con la primera mamá que guarda un carrusel. Y se completa cada sábado, en cada salón, en cada cara feliz que se vuelve testimonio.</p>
+    <div class="cta-row">
+      <a href="#cover" class="pri">Volver al inicio ↑</a>
+      <a href="#roadmap" class="sec">Ver roadmap</a>
+    </div>
+    <div class="credits">Estrategia · Mba'ekue Kids · Versión 1.0 · 2026</div>
+  </div>
+</section>
+
+<script>
+const reveals = document.querySelectorAll('[data-reveal]');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); }
+  });
+},{threshold:.12, rootMargin:'0px 0px -40px 0px'});
+reveals.forEach(el=>io.observe(el));
+
+const dots = document.querySelectorAll('.progress button');
+const sections = Array.from(document.querySelectorAll('section[id], header[id]'));
+const menuLinks = document.querySelectorAll('.topnav__menu a');
+dots.forEach(d=>{
+  d.addEventListener('click', ()=>{
+    const tgt = document.querySelector(d.dataset.target);
+    if(tgt) tgt.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+const obsActive = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id = '#' + e.target.id;
+      dots.forEach(d=>d.classList.toggle('is-active', d.dataset.target===id));
+      menuLinks.forEach(l=>l.classList.toggle('is-active', l.getAttribute('href')===id));
+    }
+  });
+},{rootMargin:'-40% 0px -55% 0px'});
+sections.forEach(s=>obsActive.observe(s));
+</script>
+</body>
+</html>
